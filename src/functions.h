@@ -7,7 +7,7 @@ int checkfile(const char *file) {
         char buffer[100];
         FILE *f  = fopen(file, "r");                               
 
-        if (f == NULL) {	
+        if (f == NULL) {
                 return 1;
 	}
 	
@@ -15,6 +15,28 @@ int checkfile(const char *file) {
 	printf("%s", buffer);
 
         return 0;
+}
+
+int get_module(char module[40]) {
+
+	struct sysinfo modules;
+	sysinfo(&modules);
+
+
+	
+	if (strcmp(module, "uptime") == 0) {
+		long seconds = modules.uptime;
+		long minutes = seconds/60;
+		long hours = minutes/60;
+
+		minutes %= 60;
+
+		printf("%ld hours, %ld mins\n", hours, minutes);
+	} else if (strcmp(module, "procs") == 0) {
+		printf("%d\n", modules.procs);
+	}
+		
+	return 0;
 }
 
 
@@ -29,7 +51,7 @@ int checkdistro() {
 	if (strstr(distro, "Linux") != NULL) {
 		printf("%s\n", distro);
 	} else {
-		printf("%s Linux \n", distro);
+		printf("%s Linux\n", distro);
 	}
 
 	return 0;

@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/sysinfo.h>
 #include "config.h"
 #include "functions.h"
 
-#define VERSION "1.2.0"
+#define VERSION "1.1.2"
 
 /* Functions are defined in functions.h file, if you want to take a look at them. */
 
@@ -23,6 +24,12 @@ int main(int argc, char *argv[]) {
 	
 	printf("%s", hostname);
 	checkfile(HOST_DIR);
+
+	printf("%s", uptime);
+	get_module("uptime");
+	
+	printf("%s", procs);
+	get_module("procs");
 
 	}
 	return 0;
