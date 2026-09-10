@@ -5,7 +5,7 @@ slowfetch is a little fetch program written in C. I decided to use it to test my
 
 # Build
 
-To build it, you can just cd into src, and run: <br>
+To build it, go to src/ directory and run: <br>
 ```bash
 gcc -o slowfetch main.c
 ```
