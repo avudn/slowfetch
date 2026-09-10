@@ -21,8 +21,6 @@ int get_module(const char * module) {
 
 	struct sysinfo modules;
 	sysinfo(&modules);
-
-
 	
 	if (strcmp(module, "uptime") == 0) {
 		long seconds = modules.uptime;
@@ -32,12 +30,15 @@ int get_module(const char * module) {
 		minutes %= 60;
 
 		printf("%ld hours, %ld mins\n", hours, minutes);
+
 	} else if (strcmp(module, "procs") == 0) {
 		printf("%d\n", modules.procs);
+
 	}
 		
 	return 0;
 }
+
 
 
 int checkdistro() {
