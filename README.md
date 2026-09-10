@@ -13,3 +13,6 @@ Then, if you want to use it globally, just run: <br>
 ```bash
 cp slowfetch /usr/bin/slowfetch
 ```
+
+# Preview
+<img src="./images/preview.jpg" height=360px>
