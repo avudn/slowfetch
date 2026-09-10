@@ -17,7 +17,7 @@ int checkfile(const char *file) {
         return 0;
 }
 
-int get_module(char module[40]) {
+int get_module(const char * module) {
 
 	struct sysinfo modules;
 	sysinfo(&modules);
