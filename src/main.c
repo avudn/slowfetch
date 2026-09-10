@@ -4,7 +4,7 @@
 #include "config.h"
 #include "functions.h"
 
-#define VERSION "1.1.2"
+#define VERSION "1.2.0"
 
 /* Functions are defined in functions.h file, if you want to take a look at them. */
 
