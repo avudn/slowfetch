@@ -25,7 +25,13 @@ int checkdistro() {
 	fgets(osrelease, sizeof(osrelease), openosrelease);
 	char *distro = (osrelease + 6);
 	distro[strlen(distro) - 2] = '\0';
-	printf("%s\n", distro);
+
+	if (strstr(distro, "Linux") != NULL) {
+		printf("%s\n", distro);
+	} else {
+		printf("%s Linux \n", distro);
+	}
+
 	return 0;
 }
 
