@@ -9,13 +9,13 @@
 
 /* Hardware Stuff */
 
-const char * os = "operational situation: ";
-const char * uptime = "uppie: ";
-const char * kernel = "hell: ";
+const char * os = "OS: ";
+const char * uptime = "Uptime: ";
+const char * kernel = "Kernel: ";
 const char * wm = "WM: ";
-const char * hostname = "entity: ";
-const char * ram = "memory: ";
-const char * procs = "processes: ";
+const char * hostname = "Host: ";
+const char * ram = "Memory: ";
+const char * procs = "Processes: ";
 const char * cpu = "CPU: ";
 
 #endif
