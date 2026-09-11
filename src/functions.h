@@ -1,7 +1,7 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#define VERSION "1.2.6"
+#define VERSION "1.2.9"
 
 int checkfile(const char *file) {
         char buffer[100];
