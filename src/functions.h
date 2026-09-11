@@ -57,7 +57,7 @@ int get_module(const char * module) {
 		char *user = getenv("USER");
 			if (user == NULL)
 				return 1;
-		printf("%s", user);
+		printf("%s\n", user);
 
 
 	} else {
