@@ -21,8 +21,12 @@ int main(int argc, char *argv[]) {
 	printf("%s", kernel);
 	checkfile(KERNEL_DIR);
 
+	printf("%s", term);
+	get_module("term");
+
 	printf("%s", hostname);
 	checkfile(HOST_DIR);
+
 
 	printf("%s", host);
 	get_module("host");

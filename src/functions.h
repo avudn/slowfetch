@@ -60,6 +60,12 @@ int get_module(const char * module) {
 		printf("%s@", user);
 		checkfile(HOST_DIR);
 
+	} else if (strcmp(module, "term") == 0) {
+		char *term = getenv("TERM");
+			if (term == NULL)
+				return 1;
+		printf("%s\n", term);
+
 	} else {
 		printf("Module not found. Aborting.");
 		return 1;

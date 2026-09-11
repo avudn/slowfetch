@@ -12,6 +12,7 @@
 const char * os = "OS: ";
 const char * uptime = "Uptime: ";
 const char * kernel = "Kernel: ";
+const char * term = "Terminal: ";
 const char * wm = "WM: ";
 const char * host = "User: ";
 const char * hostname = "Hostname: ";
