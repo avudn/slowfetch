@@ -57,8 +57,8 @@ int get_module(const char * module) {
 		char *user = getenv("USER");
 			if (user == NULL)
 				return 1;
-		printf("%s\n", user);
-
+		printf("%s@", user);
+		checkfile(HOST_DIR);
 
 	} else {
 		printf("Module not found. Aborting.");
