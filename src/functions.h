@@ -18,6 +18,7 @@ int checkfile(const char *file) {
 }
 
 
+
 void showhelp() {
 
 	printf("sifetch 1.2.6\n");
@@ -52,9 +53,17 @@ int get_module(const char * module) {
 	} else if (strcmp(module, "procs") == 0) {
 		printf("%d\n", modules.procs);
 
+	} else if (strcmp(module, "host") == 0) {
+		char *user = getenv("USER");
+			if (user == NULL)
+				return 1;
+		printf("%s", user);
+
+
 	} else {
 		printf("Module not found. Aborting.");
 		return 1;
+
 	}
 	return 0;
 }

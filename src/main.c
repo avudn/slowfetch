@@ -24,11 +24,15 @@ int main(int argc, char *argv[]) {
 	printf("%s", hostname);
 	checkfile(HOST_DIR);
 
+	printf("%s", host);
+	get_module("host");
+
 	printf("%s", uptime);
 	get_module("uptime");
 
 	printf("%s", procs);
 	get_module("procs");
+
 
 	}
 	return 0;
