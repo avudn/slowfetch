@@ -57,7 +57,7 @@ void get_memory(void) {
     unsigned long long avail = get_meminfo_value("MemAvailable:") / 1024;
     unsigned long long used  = total - avail;
 
-    printf("%llu MiB/%llu MiB\n", used, total);
+    printf("%lluM/%lluM\n", used, total);
 }
 
 int get_module(const char * module) {
@@ -76,8 +76,20 @@ int get_module(const char * module) {
 	} else if (strcmp(module, "procs") == 0) {
 		printf("%d\n", modules.procs);
 
-	} else if (strcmp(module, "host") == 0) { 	
-		checkfile(HOST_DIR);	
+	} else if (strcmp(module, "user") == 0) { 
+
+		char buf[256];
+		int get = getlogin_r(buf, sizeof(buf));
+
+		if (get != 0) {
+			printf("Login not found.");
+			return 1;
+		}
+
+		char *user = buf;
+		
+		printf("sifetch -- %s@", user);
+		checkfile(HOST_DIR);
 
 	} else if (strcmp(module, "term") == 0) {
 		char *term = getenv("TERM");
@@ -88,11 +100,11 @@ int get_module(const char * module) {
 	} else if (strcmp(module, "kernel") == 0) {
 		checkfile(KERNEL_DIR);
 
-	} else if (strcmp(module, "session") == 0) {
-		char *session = getenv("XDG_SESSION_TYPE");
-			if (session == NULL)
+	} else if (strcmp(module, "compositor") == 0) {
+		char *compositor = getenv("XDG_SESSION_TYPE");
+			if (compositor == NULL)
 				return 1;
-		printf("%s\n", session);	
+		printf("one and only %s\n", compositor);	
 
 	} else {
 		printf("Module not found. Aborting.\n");
@@ -110,10 +122,10 @@ void checkdistro() {
 	char *distro = (osrelease + 6);
 	distro[strlen(distro) - 2] = '\0';
 
-	if (strstr(distro, "Linux") != NULL) {
-		printf("%s\n", distro);
+	if (strstr(distro, "Linux\n") != NULL) {
+		printf("what could it be..? %s!\n", distro);
 	} else {
-		printf("%s Linux\n", distro);
+		printf("what could it be..? %s Linux!\n", distro);
 	}
 }
 #endif

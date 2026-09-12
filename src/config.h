@@ -10,13 +10,13 @@
 /* Hardware Stuff */
 
 const char * os = "OS: ";
-const char * uptime = "Uptime: ";
-const char * kernel = "Kernel: ";
-const char * term = "Terminal: ";
-const char * session_t = "Session: ";
-const char * host = "Host: ";
-const char * memory = "Memory: ";
-const char * procs = "Processes: ";
+const char * uptime = "uppies: ";
+const char * kernel = "kernel: ";
+const char * term = "terminal: ";
+const char * compositor = "compositor: ";
+const char * host = "user: ";
+const char * memory = "mem: ";
+const char * procs = "procs: ";
 const char * cpu = "CPU: ";
 
 #endif
