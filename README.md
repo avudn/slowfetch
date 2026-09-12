@@ -17,4 +17,4 @@ cp sifetch /usr/bin/sifetch
 # Customization
 For customization, you edit the ```config.h``` file.
 # Preview
-<img src="./images/preview.jpg" height=360px>
+<img src="./images/preview.png" height=360px>
