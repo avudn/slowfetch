@@ -21,22 +21,23 @@ int main(int argc, char *argv[]) {
 	printf("%s", kernel);
 	checkfile(KERNEL_DIR);
 
-	printf("%s", term);
-	get_module("term");
-
-	printf("%s", hostname);
-	checkfile(HOST_DIR);
-
-
-	printf("%s", host);
-	get_module("host");
+	printf("%s", memory);
+	get_memory();
 
 	printf("%s", uptime);
 	get_module("uptime");
 
+	printf("%s", term);
+	get_module("term");
+
+	printf("%s", session_t);
+	get_module("session");
+
+	printf("%s", host);
+	get_module("host");	
+
 	printf("%s", procs);
 	get_module("procs");
-
 
 	}
 	return 0;

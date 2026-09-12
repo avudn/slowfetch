@@ -13,10 +13,9 @@ const char * os = "OS: ";
 const char * uptime = "Uptime: ";
 const char * kernel = "Kernel: ";
 const char * term = "Terminal: ";
-const char * wm = "WM: ";
-const char * host = "User: ";
-const char * hostname = "Hostname: ";
-const char * ram = "Memory: ";
+const char * session_t = "Session: ";
+const char * host = "Host: ";
+const char * memory = "Memory: ";
 const char * procs = "Processes: ";
 const char * cpu = "CPU: ";
 
